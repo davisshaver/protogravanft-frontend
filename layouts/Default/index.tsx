@@ -1,9 +1,19 @@
+// External imports.
 import Head from "next/head";
 
-import Connect from "../../components/Connect";
+// Internal imports.
 import Nav from "../../components/Nav";
+
+// Types.
 import { DefaultLayoutProps } from "../../types/layouts";
 
+/**
+ * Default layout for ProtoGravaNFT.
+ *
+ * @param {Object} props for layout.
+ * @param {string} props.children for layout.
+ * @returns JSX.Element Default layout
+ */
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <div>
@@ -11,7 +21,6 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         <title>ProtogravaNFT</title>
       </Head>
       <Nav />
-      <Connect />
       {children}
     </div>
   );

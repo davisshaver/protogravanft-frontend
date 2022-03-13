@@ -1,7 +1,18 @@
+// External imports.
 import React from "react";
 import { useAccount, useConnect } from "wagmi";
+
+// Internal imports.
 import useIsMounted from "../../hooks/useIsMounted";
 
+// Component imports.
+import classes from "./classes";
+
+/**
+ * Connect component for ProtoGravaNFT frontend.
+ *
+ * @returns JSX.Element Connect button for dapp
+ */
 const Connect = () => {
   // Helper hooks
   const isMounted = useIsMounted();
@@ -38,12 +49,12 @@ const Connect = () => {
       {isMounted &&
         data.connectors.map((connector) => (
           <button
+            className={classes.buttonContainer}
             disabled={!connector.ready}
             key={connector.id}
             onClick={() => connect(connector)}
           >
-            {connector.name}
-            {!connector.ready && " (unsupported)"}
+            Connect
           </button>
         ))}
       {error && <div>{error?.message ?? "Failed to connect"}</div>}

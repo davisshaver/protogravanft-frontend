@@ -1,6 +1,14 @@
+// External imports.
 import type { NextPage } from "next";
+
+// Internal imports.
 import DefaultLayout from "../layouts/Default";
 
+/**
+ * About page for ProtoGravaNFT.
+ *
+ * @returns {NextPage} About page for Next.
+ */
 const About: NextPage = () => {
   return (
     <DefaultLayout>
