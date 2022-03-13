@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
-
 import DefaultLayout from "../layouts/Default";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <DefaultLayout>
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
+      <h1 className="text-3xl font-bold underline">About this project</h1>
     </DefaultLayout>
   );
 };
 
-export default Home;
+export default About;
